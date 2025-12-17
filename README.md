@@ -1,4 +1,4 @@
-# 🔐 Backend Authentication Role Admin & User
+# 🔐 Backend API Authentication Role Admin & User dan data history GreenHouse UBL
 
 
 ---
@@ -8,6 +8,7 @@
 * Register user (default role: `user`)
 * Login menggunakan JWT
 * Proteksi endpoint menggunakan token
+* mengatur dan mengirim data history dari database ke mobile
 * Siap diintegrasikan dengan aplikasi mobile
 
 ---
