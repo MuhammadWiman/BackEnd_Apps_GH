@@ -26,6 +26,11 @@ async function start() {
       await UltrasonicHistory.create(d);
       channel.ack(msg);
     } catch (err) {
+       // 🔇 silent duplicate (rolling 6 jam)
+      if (err.code === 11000) {
+        channel.ack(msg);
+        return;
+      }
       console.error("DHT history error:", err.message);
       channel.nack(msg, false, false);
     }
