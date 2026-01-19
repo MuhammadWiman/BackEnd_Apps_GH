@@ -10,6 +10,7 @@ const actuatorHistoryRoutes = require("./addHistory/actuatorGET");
 const dhtHistoryRoutes = require("./addHistory/dhtGET");
 const jarakHistoryRoutes = require("./addHistory/jarakGET");
 const tdsHistoryRoutes = require("./addHistory/tdsGET");
+const soilHistoryRoutes = require("./addHistory/soilGET");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -38,6 +39,7 @@ app.use("/api/dht-history", dhtHistoryRoutes);
 app.use("/api/jarak-history", jarakHistoryRoutes);
 app.use("/api/actuator-history", actuatorHistoryRoutes);
 app.use("/api/tds-history", tdsHistoryRoutes);
+app.use("/api/soil-history", soilHistoryRoutes);
 
 // ======================
 // HEALTH CHECK
